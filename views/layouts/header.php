@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- 1. DỨT ĐIỂM LỖI SEO (Kéo lại 100 điểm) -->
+    <meta name="description" content="HeliTech - Hệ thống cửa hàng bán lẻ điện thoại, phụ kiện công nghệ chính hãng, uy tín. Mua ngay iPhone 15 Pro Max với giá ưu đãi.">
+    
     <title><?= htmlspecialchars($title ?? 'HeliTech - Thế Giới Công Nghệ') ?></title>
     
-    <!-- 1. PRECONNECT ĐẾN TAILWIND & GOOGLE SỚM NHẤT -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com">
-
-    <!-- 2. ÉP TẢI ẢNH IPHONE ĐẦU TIÊN (Có fetchpriority="high" và w=400) -->
+    
+    <!-- ÉP TẢI ẢNH LCP LÊN ĐẦU -->
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=400&auto=format&fit=crop&fm=webp" fetchpriority="high">
 
     <style>
@@ -23,16 +23,17 @@
         .nav-link { transition: all 0.3s ease; }
     </style>
 
-    <!-- 4. FONT CHỮ ( -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" media="print" onload="this.media='all'">
 
-    <!-- 5. TAILWIND CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 2. DỨT ĐIỂM LỖI PERFORMANCE (Thiết lập cấu hình Tailwind TRƯỚC) -->
     <script>
-        tailwind.config = {
-            theme: { extend: { fontFamily: { sans: ['Montserrat', 'sans-serif'] }, colors: { tech: { red: '#d70018', dark: '#111111', gray: '#f3f4f6' }, brand: { red: '#d70018', dark: '#222222' } } } }
+        window.tailwind = {
+            config: {
+                theme: { extend: { fontFamily: { sans: ['Montserrat', 'sans-serif'] }, colors: { tech: { red: '#d70018', dark: '#111111', gray: '#f3f4f6' }, brand: { red: '#d70018', dark: '#222222' } } } }
+            }
         }
     </script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
 <body class="text-gray-800 antialiased bg-white relative">
     <header class="bg-black fixed w-full top-0 z-50 border-b border-gray-800">
         <div class="container mx-auto px-6 md:px-12 flex justify-between items-center h-20">
