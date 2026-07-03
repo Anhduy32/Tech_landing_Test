@@ -34,12 +34,12 @@
             <div class="relative flex justify-center items-center mt-8 lg:mt-0">
                 <div class="absolute w-[250px] h-[250px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full bg-red-600/25 blur-[120px] animate-pulse"></div>
                 <!-- TỐI ƯU ẢNH LCP: WebP + FetchPriority -->
-                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=1200&auto=format&fit=crop&fm=webp" 
-                     alt="iPhone 15 Pro Max" 
-                     fetchpriority="high"
-                     decoding="sync"
-                     width="500" height="600"
-                     class="relative z-20 w-full max-w-[220px] sm:max-w-[280px] md:max-w-md lg:max-w-lg drop-shadow-[0_35px_80px_rgba(0,0,0,.7)] hover:scale-105 duration-700">
+                <<img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=800&auto=format&fit=crop&fm=webp" 
+                alt="iPhone 15 Pro Max" 
+                fetchpriority="high"
+                decoding="sync"
+                width="500" height="600"
+                class="relative z-20 w-full max-w-[220px] sm:max-w-[280px] md:max-w-md lg:max-w-lg drop-shadow-[0_35px_80px_rgba(0,0,0,.7)] hover:scale-105 duration-700">
             </div>
         </div>
     </div>

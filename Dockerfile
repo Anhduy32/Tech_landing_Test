@@ -9,6 +9,10 @@ RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available
 # Bật rewrite để Slim Framework chạy được
 RUN a2enmod rewrite
 
+RUN a2enmod expires headers
+RUN echo "<IfModule mod_expires.c>\nExpiresActive On\nExpiresByType image/webp \"access plus 1 year\"\nExpiresByType image/jpeg \"access plus 1 year\"\nExpiresByType text/css \"access plus 1 month\"\n</IfModule>" > /etc/apache2/conf-available/caching.conf && a2enconf caching
+
+
 # Copy toàn bộ code vào container
 COPY . /var/www/html
 

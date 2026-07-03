@@ -7,20 +7,21 @@
     <title><?= htmlspecialchars($title ?? 'HeliTech - Thế Giới Công Nghệ') ?></title>
     <meta name="description" content="<?= htmlspecialchars($description ?? 'Khám phá kỷ nguyên công nghệ mới với iPhone 15 Pro Max Titanium. Mua sắm thiết bị điện tử chính hãng tại HeliTech với giá ưu đãi nhất.') ?>">
     
-    <!-- 1. PRECONNECT: Kết nối trước với server chứa ảnh và font -->
+ <!-- TỐI ƯU KẾT NỐI & TẢI ẢNH -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
-
-    <!-- 2. PRELOAD LCP: Bắt buộc tải ảnh Hero đầu tiên để tăng tốc điểm LCP -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=1200&auto=format&fit=crop&fm=webp">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
     
-    <!-- 3. CSS TÙY CHỈNH CỦA RIÊNG BẠN -->
+    <!-- TỐI ƯU ẢNH LCP (Nạp sẵn vào bộ nhớ) -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=800&auto=format&fit=crop&fm=webp">
+
+    <!-- FONT CHỮ (Tải ngầm không chặn render) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" media="print" onload="this.media='all'">
+    
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <!-- 4. TAILWIND CDN (Giữ lại để web chạy bình thường) -->
+    <!-- TAILWIND CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -35,7 +36,6 @@
             }
         }
     </script>
-</head>
 <body class="text-gray-800 antialiased bg-white relative">
     <header class="bg-black fixed w-full top-0 z-50 border-b border-gray-800">
         <div class="container mx-auto px-6 md:px-12 flex justify-between items-center h-20">
