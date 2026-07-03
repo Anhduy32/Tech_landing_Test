@@ -8,13 +8,14 @@
         </div>
         
         <div class="md:w-1/2 w-full max-w-md mx-auto md:mx-0">
-            <form action="#" method="POST" class="flex flex-col sm:flex-row gap-2">
-                <input type="email" name="email" placeholder="Nhập địa chỉ email của bạn..." required 
+            <!-- ĐÃ SỬA: Thay <form> thành <div> và type="button" -->
+            <div class="flex flex-col sm:flex-row gap-2">
+                <input type="email" id="lead-email-input" placeholder="Nhập địa chỉ email của bạn..." required 
                        class="w-full px-5 py-4 rounded-md text-gray-800 outline-none focus:ring-2 focus:ring-brand-dark shadow-lg">
-                <button type="submit" class="bg-brand-dark text-white font-bold px-8 py-4 rounded-md hover:bg-black transition-colors shadow-lg uppercase text-sm shrink-0 whitespace-nowrap">
+                <button type="button" id="btn-submit-lead" class="bg-brand-dark text-white font-bold px-8 py-4 rounded-md hover:bg-black transition-colors shadow-lg uppercase text-sm shrink-0 whitespace-nowrap">
                     Đăng ký ngay
                 </button>
-            </form>
+            </div>
             <p class="text-xs text-red-200 mt-2 text-center md:text-left">Chúng tôi cam kết không spam email của bạn.</p>
         </div>
     </div>
