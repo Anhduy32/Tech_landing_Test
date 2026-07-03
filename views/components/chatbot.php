@@ -15,11 +15,11 @@
         <div class="flex items-center gap-3">
             <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-tech-red font-black text-xs">AI</div>
             <div>
-                <h4 class="font-bold text-sm">HeliTech Assistant</h4>
+                <div class="font-bold text-sm">HeliTech Assistant</div>
                 <p class="text-[10px] text-red-200">Trực tuyến - Sẵn sàng tư vấn</p>
             </div>
         </div>
-        <button id="chatbot-close" class="text-white hover:text-gray-200">
+        <button id="chatbot-close" aria-label="Đóng" class="text-white hover:text-gray-200">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
     </div>
@@ -38,7 +38,7 @@
     <!-- Khung Nhập tin nhắn -->
     <div class="p-3 border-t border-gray-200 bg-white flex gap-2">
         <input type="text" id="chat-input" placeholder="Nhập câu hỏi của bạn..." class="flex-1 bg-gray-100 text-sm rounded-full px-4 py-2 outline-none focus:ring-1 focus:ring-tech-red">
-        <button id="chat-send" class="w-10 h-10 bg-tech-red rounded-full flex items-center justify-center text-white hover:bg-red-700 transition">
+        <button id="chat-send" aria-label="Gửi tin nhắn" class="w-10 h-10 bg-tech-red rounded-full flex items-center justify-center text-white">>
             <svg class="w-4 h-4 transform -rotate-45 -ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
         </button>
     </div>
