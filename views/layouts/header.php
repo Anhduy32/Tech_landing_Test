@@ -5,35 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title><?= htmlspecialchars($title ?? 'HeliTech - Thế Giới Công Nghệ') ?></title>
-    <meta name="description" content="<?= htmlspecialchars($description ?? 'Khám phá kỷ nguyên công nghệ mới với iPhone 15 Pro Max Titanium. Mua sắm thiết bị điện tử chính hãng tại HeliTech với giá ưu đãi nhất.') ?>">
     
- <!-- TỐI ƯU KẾT NỐI & TẢI ẢNH -->
+    <!-- 1. PRECONNECT ĐẾN TAILWIND & GOOGLE SỚM NHẤT -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-    
-    <!-- TỐI ƯU ẢNH LCP (Nạp sẵn vào bộ nhớ) -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=800&auto=format&fit=crop&fm=webp">
 
-    <!-- FONT CHỮ (Tải ngầm không chặn render) -->
+    <!-- 2. ÉP TẢI ẢNH IPHONE ĐẦU TIÊN (Có fetchpriority="high" và w=400) -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=400&auto=format&fit=crop&fm=webp" fetchpriority="high">
+
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+        body { overflow-x: hidden; background-color: #f3f4f6; }
+        .tech-shadow { box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .tech-shadow:hover { box-shadow: 0 10px 25px rgba(215, 0, 24, 0.15); }
+        .nav-link { transition: all 0.3s ease; }
+    </style>
+
+    <!-- 4. FONT CHỮ ( -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" media="print" onload="this.media='all'">
-    
-    <link rel="stylesheet" href="/assets/css/style.css">
 
-    <!-- TAILWIND CDN -->
+    <!-- 5. TAILWIND CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Montserrat', 'sans-serif'] },
-                    colors: {
-                        tech: { red: '#d70018', dark: '#111111', gray: '#f3f4f6' },
-                        brand: { red: '#d70018', dark: '#222222' } 
-                    }
-                }
-            }
+            theme: { extend: { fontFamily: { sans: ['Montserrat', 'sans-serif'] }, colors: { tech: { red: '#d70018', dark: '#111111', gray: '#f3f4f6' }, brand: { red: '#d70018', dark: '#222222' } } } }
         }
     </script>
 <body class="text-gray-800 antialiased bg-white relative">

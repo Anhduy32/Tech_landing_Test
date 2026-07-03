@@ -34,12 +34,12 @@
             <div class="relative flex justify-center items-center mt-8 lg:mt-0">
                 <div class="absolute w-[250px] h-[250px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full bg-red-600/25 blur-[120px] animate-pulse"></div>
                 <!-- TỐI ƯU ẢNH LCP: WebP + FetchPriority -->
-                <<img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=800&auto=format&fit=crop&fm=webp" 
-                alt="iPhone 15 Pro Max" 
-                fetchpriority="high"
-                decoding="sync"
-                width="500" height="600"
-                class="relative z-20 w-full max-w-[220px] sm:max-w-[280px] md:max-w-md lg:max-w-lg drop-shadow-[0_35px_80px_rgba(0,0,0,.7)] hover:scale-105 duration-700">
+                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=400&auto=format&fit=crop&fm=webp" 
+                    alt="iPhone 15 Pro Max" 
+                    fetchpriority="high"
+                    decoding="sync"
+                    width="400" height="480"
+                    class="relative z-20 w-full max-w-[220px] sm:max-w-[280px] md:max-w-md lg:max-w-lg drop-shadow-[0_35px_80px_rgba(0,0,0,.7)] hover:scale-105 duration-700">
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@
                     <p class="text-xs md:text-sm mb-4">Giảm thêm 5% khi mua kèm điện thoại.</p>
                 </div>
                 <!-- LAZY LOAD + WEBP -->
-                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=400&auto=format&fit=crop&fm=webp" loading="lazy" decoding="async" class="absolute right-0 top-0 h-full w-1/2 object-cover opacity-80" alt="Apple">
+                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=300&auto=format&fit=crop&fm=webp" loading="lazy" decoding="async" class="absolute right-0 top-0 h-full w-1/2 object-cover opacity-80" alt="Apple">
             </div>
             
             <div class="bg-brand-red rounded-lg overflow-hidden flex items-center p-5 md:p-8 h-[200px] relative">
@@ -88,7 +88,7 @@
                     <p class="text-xs md:text-sm mb-4">Âm thanh đỉnh cao, chống ồn chủ động.</p>
                 </div>
                 <!-- LAZY LOAD + WEBP -->
-                <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=400&auto=format&fit=crop&fm=webp" loading="lazy" decoding="async" class="absolute -right-6 md:-right-10 bottom-0 h-[110%] w-auto object-contain" alt="Sony">
+                <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=300&auto=format&fit=crop&fm=webp" loading="lazy" decoding="async" class="absolute -right-6 md:-right-10 bottom-0 h-[110%] w-auto object-contain" alt="Sony">
             </div>
         </div>
     </section>
