@@ -7,13 +7,20 @@
     <title><?= htmlspecialchars($title ?? 'HeliTech - Thế Giới Công Nghệ') ?></title>
     <meta name="description" content="<?= htmlspecialchars($description ?? 'Khám phá kỷ nguyên công nghệ mới với iPhone 15 Pro Max Titanium. Mua sắm thiết bị điện tử chính hãng tại HeliTech với giá ưu đãi nhất.') ?>">
     
-    <meta property="og:title" content="<?= htmlspecialchars($title ?? 'HeliTech - Thế Giới Công Nghệ') ?>">
-    <meta property="og:description" content="<?= htmlspecialchars($description ?? 'Khám phá kỷ nguyên công nghệ mới với iPhone 15 Pro Max Titanium. Đặt hàng ngay hôm nay!') ?>">
-    <meta property="og:image" content="<?= htmlspecialchars($ogImage ?? 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=1200&auto=format&fit=crop') ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://helicorp.vn">
+    <!-- 1. PRECONNECT: Kết nối trước với server chứa ảnh và font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- 2. PRELOAD LCP: Bắt buộc tải ảnh Hero đầu tiên để tăng tốc điểm LCP -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=1200&auto=format&fit=crop&fm=webp">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- 3. CSS TÙY CHỈNH CỦA RIÊNG BẠN -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- 4. TAILWIND CDN (Giữ lại để web chạy bình thường) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,12 +35,9 @@
             }
         }
     </script>
-    
-    <!-- TÁCH CSS: Nhúng file CSS bên ngoài vào đây -->
-    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="text-gray-800 antialiased bg-white relative">
-    <header class="glass-nav fixed w-full top-0 z-50 transition-all duration-300">
+    <header class="bg-black fixed w-full top-0 z-50 border-b border-gray-800">
         <div class="container mx-auto px-6 md:px-12 flex justify-between items-center h-20">
             <a href="/" class="text-2xl font-extrabold text-white uppercase flex-shrink-0 tracking-tight">
                 HELI<span class="text-tech-red">TECH</span>

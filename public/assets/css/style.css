@@ -1,9 +1,9 @@
 /* ==========================================
-   1. GLOBAL (Cấu hình toàn trang)
+   CSS TÙY CHỈNH (HELI-TECH)
    ========================================== */
 html { 
     scroll-behavior: smooth; 
-    scroll-padding-top: 5rem; /* Bù trừ chiều cao header khi cuộn */
+    scroll-padding-top: 5rem; 
 }
 
 body { 
@@ -11,26 +11,16 @@ body {
     background-color: #f3f4f6; 
 }
 
-/* ==========================================
-   2. HEADER & NAVIGATION
-   ========================================== */
-.glass-nav {
-    background: rgba(17, 17, 17, 0.9);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nav-link { 
-    transition: all 0.3s ease; 
-}
-
-/* ==========================================
-   3. COMPONENTS (Card Sản phẩm, Form, v.v)
-   ========================================== */
+/* Hiệu ứng bóng đổ thẻ sản phẩm */
 .tech-shadow { 
     box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
 }
 
 .tech-shadow:hover { 
     box-shadow: 0 10px 25px rgba(215, 0, 24, 0.15); 
+}
+
+/* Hiệu ứng chuyển màu menu */
+.nav-link { 
+    transition: all 0.3s ease; 
 }

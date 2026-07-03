@@ -12,9 +12,7 @@ AppFactory::setContainer($container);
 $app = AppFactory::create();
 $app->addBodyParsingMiddleware();
 
-// ==========================================
 // 1. KẾT NỐI DATABASE SQLITE
-// ==========================================
 $container->set('db', function() {
     $dbPath = __DIR__ . '/../database/store.sqlite';
     if (!is_dir(__DIR__ . '/../database')) {
@@ -43,9 +41,7 @@ $container->set('view', function() {
     return new PhpRenderer(__DIR__ . '/../views');
 });
 
-// ==========================================
 // 2. ROUTE KHÁCH HÀNG (GET)
-// ==========================================
 $app->get('/', function (Request $request, Response $response) {
     $db = $this->get('db');
     $stmt = $db->query("SELECT * FROM products ORDER BY id DESC LIMIT 8");
@@ -58,27 +54,23 @@ $app->get('/', function (Request $request, Response $response) {
     ]);
 });
 
-// ==========================================
 // 3. ROUTE ADMIN (GET)
-// ==========================================
 $app->get('/admin', function (Request $request, Response $response) {
     $response->getBody()->write("Trang Quản Trị Admin (Sắp ra mắt)");
     return $response;
 });
 
-// ==========================================
-// 4. ROUTE WEBHOOK API (POST) - TÍNH NĂNG ĐIỂM CỘNG
-// ==========================================
+// 4. ROUTE WEBHOOK API (POST)
 $app->post('/api/webhook', function (Request $request, Response $response) {
     $data = $request->getParsedBody();
     
     if (empty($data['event_type'])) {
-        $response->getBody()->write(json_encode(['success' => false, 'error' => 'Dữ liệu không hợp lệ']));
+        $response->getBody()->write(json_encode(['success' => false]));
         return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
     }
 
-    // URL Webhook của bạn (Lấy từ webhook.site)
-    $webhookUrl = 'https://webhook.site/cab83402-b7c2-433f-8575-9f7cfc8146c1';
+    // NHỚ THAY LINK CỦA BẠN (Lấy từ trang webhook.site)
+    $webhookUrl = 'https://webhook.site/THAY_BANG_LINK_CUA_BAN';
 
     $options = [
         'http' => [
@@ -91,14 +83,10 @@ $app->post('/api/webhook', function (Request $request, Response $response) {
             ])
         ]
     ];
-    $context = stream_context_create($options);
-    @file_get_contents($webhookUrl, false, $context);
+    @file_get_contents($webhookUrl, false, stream_context_create($options));
 
-    $response->getBody()->write(json_encode(['success' => true, 'message' => 'Đã đẩy lên Webhook']));
+    $response->getBody()->write(json_encode(['success' => true]));
     return $response->withHeader('Content-Type', 'application/json');
 });
 
-// ==========================================
-// LỆNH CHẠY APP (BẮT BUỘC NẰM CUỐI CÙNG)
-// ==========================================
 $app->run();

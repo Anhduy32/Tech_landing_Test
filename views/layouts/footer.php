@@ -1,5 +1,8 @@
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Đã tối ưu tải ngầm CSS và JS của thư viện AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     
     <?php 
         if (file_exists(__DIR__ . '/../components/chatbot.php')) {
