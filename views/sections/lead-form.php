@@ -1,23 +1,35 @@
-<!-- ================= LEAD FORM / NEWSLETTER ================= -->
-<section class="bg-tech-red text-white py-12 md:py-16 relative overflow-hidden" data-aos="fade-up">
-    <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), repeating-linear-gradient(45deg, #000 25%, #d70018 25%, #d70018 75%, #000 75%, #000); background-position: 0 0, 10px 10px; background-size: 20px 20px;"></div>
+<!-- ================= LEAD FORM / NEWSLETTER (DẠNG THẺ NỔI) ================= -->
+<!-- ĐÃ SỬA: Thêm mb-12 md:mb-16 để tạo khoảng cách. Dùng container để bóp chiều rộng bằng với các khối trên -->
+<section class="container mx-auto px-4 md:px-8 mb-12 md:mb-16" data-aos="fade-up">
     
-    <div class="container mx-auto px-4 md:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div class="md:w-1/2 text-center md:text-left">
-            <h2 class="text-2xl md:text-3xl font-black uppercase mb-3 drop-shadow-md">Đăng ký nhận tin khuyến mãi</h2>
-            <p class="text-red-100 text-sm md:text-base">Nhận ngay mã giảm giá <strong class="text-white text-lg">500.000đ</strong> cho đơn hàng đầu tiên khi đăng ký sớm.</p>
+    <!-- ĐÃ SỬA: Thêm rounded-2xl (bo góc) và shadow-2xl (bóng đổ) để tạo cảm giác lơ lửng -->
+    <div class="bg-[#111111] rounded-2xl border border-gray-800 py-12 md:py-16 relative overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.2)]">
+        
+        <!-- Hiệu ứng nền sương mù đỏ -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brand-red/10 rounded-full blur-[100px]"></div>
+            <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 1px); background-size:30px 30px;"></div>
         </div>
         
-        <div class="md:w-1/2 w-full max-w-md mx-auto md:mx-0">
-            <!-- Dùng div thay form để Javascript kiểm soát Webhook 100% -->
-            <div class="flex flex-col sm:flex-row gap-2">
-                <input type="email" id="lead-email-input" placeholder="Nhập địa chỉ email của bạn..." required 
-                       class="w-full px-5 py-4 rounded-md text-gray-800 outline-none focus:ring-2 focus:ring-brand-dark shadow-lg">
-                <button type="button" id="btn-submit-lead" class="bg-brand-dark text-white font-bold px-8 py-4 rounded-md hover:bg-black transition-colors shadow-lg uppercase text-sm shrink-0">
-                    Đăng ký ngay
-                </button>
+        <!-- Nội dung -->
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 px-6 md:px-12">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-2xl md:text-3xl font-black uppercase mb-3 text-white tracking-wide">Đăng ký nhận tin</h2>
+                <p class="text-gray-400 text-sm md:text-base">Nhận ngay mã giảm giá <strong class="text-brand-red text-lg">500.000đ</strong> cho đơn hàng đầu tiên.</p>
             </div>
-            <p class="text-xs text-red-200 mt-2 text-center md:text-left">Chúng tôi cam kết không spam email của bạn.</p>
+            
+            <div class="md:w-1/2 w-full max-w-md mx-auto md:mx-0">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" id="lead-email-input" aria-label="Nhập địa chỉ email của bạn" placeholder="Nhập email của bạn..." required 
+                           onkeypress="if(event.key === 'Enter') document.getElementById('btn-submit-lead').click();"
+                           class="w-full px-5 py-4 rounded-md bg-gray-900 border border-gray-700 text-white outline-none focus:border-brand-red shadow-lg">
+                    <button type="button" id="btn-submit-lead" aria-label="Gửi đăng ký nhận tin" 
+                            class="bg-gradient-to-r from-red-600 to-red-500 text-white font-bold px-8 py-4 rounded-md hover:scale-105 transition-transform shadow-[0_5px_20px_rgba(215,0,24,.3)] uppercase text-sm shrink-0">
+                        Đăng ký ngay
+                    </button>
+                </div>
+            </div>
         </div>
+        
     </div>
 </section>

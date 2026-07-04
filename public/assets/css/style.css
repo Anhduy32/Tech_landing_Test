@@ -8,19 +8,59 @@ html {
 
 body { 
     overflow-x: hidden; 
-    background-color: #f3f4f6; 
+    background-color: #f3f4f6; /* Nền xám nhạt mặc định cho toàn trang */
 }
 
+.bg-tech-dark {
+    background-color: #111111 !important;
+}
+
+.bg-brand-dark {
+    background-color: #222222 !important;
+}
+
+.bg-tech-red {
+    background-color: #d70018 !important;
+}
+
+.text-brand-red {
+    color: #d70018 !important;
+}
+
+/* ==========================================
+   HIỆU ỨNG UI / UX
+   ========================================== */
 /* Hiệu ứng bóng đổ thẻ sản phẩm */
 .tech-shadow { 
     box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Thêm transition cho mượt */
 }
 
 .tech-shadow:hover { 
     box-shadow: 0 10px 25px rgba(215, 0, 24, 0.15); 
+    transform: translateY(-5px); /* Hiệu ứng nảy thẻ SP lên nhẹ nhàng */
 }
 
 /* Hiệu ứng chuyển màu menu */
 .nav-link { 
     transition: all 0.3s ease; 
+}
+
+/* Đổi màu chữ riêng cho khu vực Header thành đỏ */
+header {
+    color: #f23d3d;
+}
+
+header a, 
+header .nav-link {
+    color: #f23d3d !important;
+}
+
+header a:hover, 
+header .nav-link:hover {
+    color: #d70018 !important; /* Đỏ đậm hơn một chút khi di chuột qua */
+}
+
+.border-brand-red { 
+    border-color: #d70018 !important; 
 }
