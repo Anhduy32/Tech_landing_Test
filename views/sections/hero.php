@@ -37,6 +37,30 @@
     </div>
 </section>  
 
+<?php
+$products = [
+    [
+        'name'  => 'iPhone 15 Pro Max 256GB - Titan Tự Nhiên',
+        'price' => 34990000,
+        'image' => 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=400&auto=format&fit=crop'
+    ],
+    [
+        'name'  => 'iPhone 14 Pro Max 256GB - Tím Deep Purple',
+        'price' => 27490000,
+        'image' => 'https://images.unsplash.com/photo-1664478546384-d57ffe74a78c?q=80&w=400&auto=format&fit=crop'
+    ],
+    [
+        'name'  => 'iPhone 13 128GB - Đen Midnight (Chính Hãng VN/A)',
+        'price' => 15990000,
+        'image' => 'https://images.unsplash.com/photo-1632661674596-df8be070a5c5?q=80&w=400&auto=format&fit=crop'
+    ],
+[
+        'name'  => 'iPhone 15 128GB - Xanh Lá',
+        'price' => 22490000,
+        'image' => '/assets/images/Iphone15_Xanhla.jpg'
+    ]
+];
+?>
 <!-- ================= SHOP SECTION ================= -->
 <section id="shop" class="py-12 md:py-16 container mx-auto px-4 md:px-8" data-aos="fade-up">
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 mb-8 border-b-2 border-brand-red pb-2">
@@ -61,7 +85,7 @@
     </div>
 </section>
 
-<!-- ================= PROMO SECTION (Đồng bộ Apple & Sony) ================= -->
+<!-- ================= PROMO SECTION ================= -->
 <section id="promo" class="container mx-auto px-4 md:px-8 mb-12" data-aos="fade-up">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="bg-gray-800 rounded-lg overflow-hidden flex items-center p-5 md:p-8 h-[200px] relative">
